@@ -1,0 +1,29 @@
+{
+  "name": "danish-radio-image-inheritage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^1.4.2",
+    "babyparse": "^0.4.3",
+    "image-size": "^0.3.5",
+    "leveldown": "^1.4.1",
+    "levelup": "^1.2.1",
+    "request": "^2.64.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinsimper/danish-radio-image-inheritage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinsimper/danish-radio-image-inheritage/issues"
+  },
+  "homepage": "https://github.com/kevinsimper/danish-radio-image-inheritage#readme"
+}
