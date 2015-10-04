@@ -1,12 +1,13 @@
+var fs = require('fs')
 var levelup = require('levelup')
 var db = levelup('./imagedb', {
   valueEncoding : 'json'
 })
-var counter = 0
+var rawdata = []
 db.createReadStream()
   .on('data', function (data) {
-    console.log(data.key, '=', data.value)
-    counter++
+    // console.log(data.key, '=', data.value)
+    rawdata.push(data)
   })
   .on('error', function (err) {
     console.log('Oh my!', err)
@@ -16,5 +17,5 @@ db.createReadStream()
   })
   .on('end', function () {
     // console.log('Stream closed')
-    console.log(counter)
+    fs.writeFile('data.json', JSON.stringify(rawdata, null, 2))
   })
